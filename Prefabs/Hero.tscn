@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgsiuptm46ig4"]
+
+[ext_resource type="Material" uid="uid://l1d4c5ivdqsh" path="res://Materials/Ally.tres" id="1_apfog"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_yxoco"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_4wrj1"]
+
+[node name="Hero" type="Node3D"]
+
+[node name="Jumper" type="Node3D" parent="."]
+
+[node name="Body" type="MeshInstance3D" parent="Jumper"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+material_override = ExtResource("1_apfog")
+mesh = SubResource("SphereMesh_yxoco")
+
+[node name="Eye" type="MeshInstance3D" parent="Jumper/Body"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.17, 0.32, 0.3)
+mesh = SubResource("SphereMesh_4wrj1")
+
+[node name="Eye2" type="MeshInstance3D" parent="Jumper/Body"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.17, 0.32, 0.3)
+mesh = SubResource("SphereMesh_4wrj1")
